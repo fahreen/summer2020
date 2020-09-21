@@ -3,12 +3,14 @@
 ## Table of Contents
 
 1. [ Coreferencing/NER Related Work ](#desc1)
+  a. [ Description ](#desc1.1)
 2. [ Graphviz](#desc2)
 
 
 
 <a name="desc1"></a>
 # Coreferencing/NER Related Work
+<a name="desc1.1"></a>
 ## 1. Description
 
 This pipeline performs general coreference resolution for biomedical text. It incorporates a variety of coreference types (anaphora, appositive, etc.) and their textual expressions (definite noun phrases, possessive pronouns, etc.).
