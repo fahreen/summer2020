@@ -3,24 +3,24 @@
 ## Table of Contents
 
 1)[ Coreferencing ](#desc1) <br>
-    a. [ Description ](#desc1.1) <br>
-    b. [Run the Pipeline](#desc1.2) <br>
-    c. [Running raw text files as input for the pipeline](#desc1.2) <br>
-    d. [Using brat to Visually Display the Output](#desc1.2) <br>
-    e. [BRAT](#desc1.2) <br>
-    f. [Edit the Pipeline](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. [ Description ](#desc1.1) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. [Run the Pipeline](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. [Running raw text files as input for the pipeline](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [Using brat to Visually Display the Output](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. [BRAT](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f. [Edit the Pipeline](#desc1.2) <br>
 
 
 2)[ NER ](#desc1) <br>
-    a. [ PubTator Central](#desc1.1) <br>
-    b. [Pubtator API for processing raw text](#desc1.2) <br>
-    c. [BioC](#desc1.2) <br>
-    d. [MetaMap Lite](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. [ PubTator Central](#desc1.1) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. [Pubtator API for processing raw text](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. [BioC](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [MetaMap Lite](#desc1.2) <br>
     
 
 3)[ Graphviz](#desc2)
-    a. [ Running](#desc1.1) <br>
-    b. [ Create the Webpage ](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. [ Running](#desc1.1) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. [ Create the Webpage ](#desc1.2) <br>
 
 
 <a name="desc1"></a>
