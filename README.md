@@ -277,8 +277,7 @@ Output: many options, choose brat for standoff annotation format (can pass throu
 <a name="desc3.1"></a>
 ## a. Description and Resources
 Graphviz was used to recreate the graph of claim-claim and figure-claim Connections found in " Dimerization Interactions of the b Subunit of the E.Coli ATPase".<br>
-Original Paper:
-Webpage: 
+Webpage: https://fahreen.github.io/graphvizProject/
 <a name="desc3.2"></a>
 ## b. Dot Language
 Graphviz files are written in DOT.  For a simple introduction, refer to this webpage. https://graphviz.org/doc/info/lang.html
