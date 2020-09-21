@@ -2,10 +2,10 @@
 
 ## Table of Contents
 
-1. [ Coreferencing/NER Related Work ](#desc1)
-  a. [ Description ](#desc1.1)
-2. [ Graphviz](#desc2)
-
+[ Coreferencing/NER Related Work ](#desc1) <br>
+  1. [ Description ](#desc1.1) <br>
+  2. [ Description ](#desc1.2) <br>
+[ Graphviz](#desc2)
 
 
 <a name="desc1"></a>
@@ -24,13 +24,12 @@ Read [Paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0
 
 Download [Code](https://github.com/kilicogluh/Bio-SCoRes)
 
-
-# Run The Pipeline
-## Requirements
+## Run The Pipeline
+### Requirements
 * Java (jar files have been generated with 1.8, though it is possible to recompile with 1.7)
 * Ant (needed for recompilation, version 1.8 was used for compilation)
 
-## Details
+### Details
 **Input:**
 
 * all input files must be in XML format(.xml)
@@ -38,9 +37,9 @@ Download [Code](https://github.com/kilicogluh/Bio-SCoRes)
 **Output:**
 * the output is generated in [Standoff Annotation Format](https://brat.nlplab.org/standoff.html)(.ann)
 
-## The Scripts
+### The Scripts
 
-### Details
+#### Details
 The package above contains 7 scripts, and can be found under the folder **bin**. They do not require any arguments and point to existing input and output directories under the folder **DATA**.  Running them will demonstrate the capabilities of Bio-SCoRes.
 
 * **bionlp:** this script only runs anaphora/appositive resolution on [BioNLP'11 Shared Task coreference dataset.](http://2011.bionlp-st.org/home) This pipeline consists of mention detection and mention-referent linking.
