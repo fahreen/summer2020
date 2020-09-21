@@ -9,29 +9,30 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Details <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Scripts <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run the script <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. [Running raw text files as input for the pipeline](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. [Running raw text files as input for the pipeline](#desc1.3) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the scripts included in this repository<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to write your own script file to run raw texts <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [BRAT](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [BRAT](#desc1.4) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standoff Annotation Format <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting up the brat standalone server<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using the brat standalone server to visualize .ann files<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using the brat standalone server to annotate manually<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuring brat<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. [Edit the Pipeline](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. [Edit the Pipeline](#desc1.5) <br>
 
 
-2)[ NER ](#desc1) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. [ PubTator Central](#desc1.1) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. [Pubtator API for processing raw text](#desc1.2) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. [BioC](#desc1.2) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [MetaMap Lite](#desc1.2) <br>
+2)[ NER ](#desc2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. [ PubTator Central](#desc2.1) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. [Pubtator API for processing raw text](#desc2.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. [BioC](#desc2.3) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [MetaMap Lite](#desc2.4) <br>
     
 
-3)[ Graphviz](#desc2) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. [ Running](#desc1.1) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. [ Create the Webpage ](#desc1.2) <br>
-
+3)[ Graphviz](#desc3) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. [ Running](#desc3.1) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. [ Dot Language ](#desc3.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. [Running Graphviz](#desc3.3) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [Creating the Interactive Webpage](#desc3.3) <br>
 
 <a name="desc1"></a>
 # 1) Coreferencing
@@ -47,7 +48,7 @@ The paper looks at three domains:
 Read [Paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0148538)
 
 Download [Code](https://github.com/kilicogluh/Bio-SCoRes)
-
+<a name="desc1.2"></a>
 ## b. Run The Pipeline
 ### Requirements
 * Java (jar files have been generated with 1.8, though it is possible to recompile with 1.7)
@@ -98,7 +99,7 @@ For example, to run the bionlp script
 ```
 ./bin/bionlp
 ```
-
+<a name="desc1.3"></a>
 ## c. Running raw text files as input for the pipeline
 ### Use the scripts included in this repository
 1) Download the **stanford-corenlp-3.3.1-models.jar** file included in this repository, and place it in the **lib** folder found in the BioScores package
@@ -140,7 +141,7 @@ done
 
 java -Xmx1G -Djava.util.logging.config.file=logging.properties tasks.coref....[XML_WRITER] [INPUT_FOLDER] [OUTPUT_FOLDER]
 ```
-
+<a name="desc1.4"></a>
 ## d. BRAT
 ### Standoff Annotation Format
 The Bio-Scores pipeline produces .ann files, which are in Standoff Annotation Format. Here is an example of a typical .ann file:
@@ -210,9 +211,9 @@ For a breakdown of the pipeline, and how to build configurations, there is a [go
 
 For a better understanding of the structure of the code in the pipeline, take a look at the [UML diagram](https://app.diagrams.net/#G1RE_8oV_YLIL5-iApDI-j_2tjE0FMZ7h1) I've created.
 
-
+<a name="desc2"></a>
 # 2) NER(Named Entity Recognition)
-
+<a name="desc2.1"></a>
 ## a. PubTator Central
 PubTator Central (PTC) is a Web-based system, which provides automatic annotations of biomedical concepts such as genes and mutations. It is powered by TaggerOne, tmVar, GNormPlus, SR4GN and SimConcept.
 
@@ -224,7 +225,7 @@ https://www.ncbi.nlm.nih.gov/research/pubtator/index.html?view=docsum&query=[PMI
 ```
 or enter ID from this Pubtar [search engine](https://www.ncbi.nlm.nih.gov/research/pubtator/index.html)
 
-
+<a name="desc2.2"></a>
 ## b. Pubtator API for processing raw text
 To process any raw text, input must be converted to [BioC](http://bioc.sourceforge.net/), pubtator or JSON formats. There is a section below, which provides the APIs to retrieve the  BioC format for an article. Unfortunately, BioC formats are also only availaible for articles in the PMC and Pubmed databases.
 
@@ -250,7 +251,7 @@ When submitting this request, the system will return a warning message : [Warnin
 
 
 For more information about formats, visit [here](https://www.ncbi.nlm.nih.gov/research/pubtator/api.html)
-
+<a name="desc2.3"></a>
 ## c. BioC
 
 [API](https://www.ncbi.nlm.nih.gov/research/bionlp/APIs/BioC-PMC/) for retrieving  PMC abstracts in BioC format:
@@ -262,7 +263,7 @@ For more information about formats, visit [here](https://www.ncbi.nlm.nih.gov/re
  https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pubmed.cgi/BioC_[format]/[PMID]/[encoding]
 ```
 
-
+<a name="desc2.4"></a>
 ## d. MetaMap Lite
 Follow this [link](https://metamap.nlm.nih.gov/MetaMapLite.shtml) to access Metamap and select "MetaMap Lite" under **Run Locally**. Metamap requires a username and password for access, can be retrieved from Dr. Mercer.
 
@@ -271,17 +272,18 @@ Input: raw text file
 Output: many options, choose brat for standoff annotation format (can pass through brat server to get a visualization of the annotations)
 
 
-<a name="desc1"></a>
+<a name="desc3"></a>
 # 1) Graphviz
-<a name="desc1.1"></a>
+<a name="desc3.1"></a>
 ## a. Description and Resources
 Graphviz was used to recreate the graph of claim-claim and figure-claim Connections found in " Dimerization Interactions of the b Subunit of the E.Coli ATPase".<br>
 Original Paper:
 Webpage: 
+<a name="desc3.2"></a>
 ## b. Dot Language
 Graphviz files are written in DOT.  For a simple introduction, refer to this webpage. https://graphviz.org/doc/info/lang.html
 
-
+<a name="desc3.3"></a>
 ## c. Running Graphviz
 Graphviz is a simple language which can be used to generate graphs which are structured to be more readable through Graphviz's Algorithm.
 Many input and output  formats are accepted.  You can read about them here. <br> https://graphviz.org/doc/info/output.html
@@ -292,7 +294,7 @@ One way of running is specified below.  Many other examples can be found here. h
  ```
 neato -Tsvg input.gv -o output.svg
 ```
-
+<a name="desc3.4"></a>
 ## d. Creating the Interactive Webpage
 1) Create the graph as an SVG, using neato.
  ```
