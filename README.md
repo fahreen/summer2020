@@ -5,10 +5,10 @@
 1)[ Coreferencing ](#desc1) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. [ Description ](#desc1.1) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. [Run the Pipeline](#desc1.2) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Requirements <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Details <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Scripts <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Run the script <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Requirements <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Details <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Scripts <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run the script <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. [Running raw text files as input for the pipeline](#desc1.2) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [Using brat to Visually Display the Output](#desc1.2) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. [BRAT](#desc1.2) <br>
