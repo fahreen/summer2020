@@ -2,17 +2,31 @@
 
 ## Table of Contents
 
-[ Coreferencing/NER Related Work ](#desc1) <br>
-  1. [ Description ](#desc1.1) <br>
-  2. [ Description ](#desc1.2) <br>
-[ Graphviz](#desc2)
+1)[ Coreferencing ](#desc1) <br>
+    a. [ Description ](#desc1.1) <br>
+    b. [Run the Pipeline](#desc1.2) <br>
+    c. [Running raw text files as input for the pipeline](#desc1.2) <br>
+    d. [Using brat to Visually Display the Output](#desc1.2) <br>
+    e. [BRAT](#desc1.2) <br>
+    f. [Edit the Pipeline](#desc1.2) <br>
+
+
+2)[ NER ](#desc1) <br>
+    a. [ PubTator Central](#desc1.1) <br>
+    b. [Pubtator API for processing raw text](#desc1.2) <br>
+    c. [BioC](#desc1.2) <br>
+    d. [MetaMap Lite](#desc1.2) <br>
+    
+
+3)[ Graphviz](#desc2)
+    a. [ Running](#desc1.1) <br>
+    b. [ Create the Webpage ](#desc1.2) <br>
 
 
 <a name="desc1"></a>
 # Coreferencing/NER Related Work
 <a name="desc1.1"></a>
 ## 1. Description
-
 This pipeline performs general coreference resolution for biomedical text. It incorporates a variety of coreference types (anaphora, appositive, etc.) and their textual expressions (definite noun phrases, possessive pronouns, etc.).
 
 The paper looks at three domains:
