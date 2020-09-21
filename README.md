@@ -271,6 +271,36 @@ Input: raw text file
 Output: many options, choose brat for standoff annotation format (can pass through brat server to get a visualization of the annotations)
 
 
+<a name="desc1"></a>
+# 1) Graphviz
+<a name="desc1.1"></a>
+## a. Description and Resources
+Graphviz was used to recreate the graph of claim-claim and figure-claim Connections found in " Dimerization Interactions of the b Subunit of the E.Coli ATPase".<br>
+Original Paper:
+Webpage: 
+## b. Dot Language
+Graphviz files are written in DOT.  For a simple introduction, refer to this webpage. https://graphviz.org/doc/info/lang.html
 
 
+## c. Running Graphviz
+Graphviz is a simple language which can be used to generate graphs which are structured to be more readable through Graphviz's Algorithm.
+Many input and output  formats are accepted.  You can read about them here. <br> https://graphviz.org/doc/info/output.html
+
+To download graphviz, for MAC or WINDOWS, you can find the instructions here: https://graphviz.org/download/ <br>
+
+One way of running is specified below.  Many other examples can be found here. https://graphviz.org/doc/info/command.html
+ ```
+neato -Tsvg input.gv -o output.svg
+```
+
+## d. Creating the Interactive Webpage
+1) Create the graph as an SVG, using neato.
+ ```
+ neato -Tsvg input.gv -o output.svg
+```
+2) Insert the svg wiithin an HTML page, by copy pasting everything within the <svg> tag.
+3) To create a responsive node (on click), create a JS function, similar to one outlined in the javascript file, and target the node using the autogenerate <id> tag   
+More detailed information can be found within the comments of the HTML, CSS and Javascript files included in the WEBPAGE directory.
+    
+   
 
