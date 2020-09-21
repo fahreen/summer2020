@@ -366,15 +366,16 @@ function fifteenA(){
 }
 ```
 
-4) To link a highlighted PDF, name a PDF file based on each conclusion. 
+4) To link a highlighted PDF, name a PDF file based on each conclusion. Then place it in the Directory "PDF". Highlight the conclusion and premises using the simple highlighting tool in the PDF preview tool on mac. Add notes to the corresponding highlights. Do not press save, this leads to the notes being lost.  Simply close the PDFs after highlighting.  Following this include the following line within the node <g> tag
     
-
-
-
 ```
 onclick="window.open('PDF/15A.pdf', '_blank', 'fullscreen=yes');
 ```
+This is not the ideal way to set this up, and it is something I did on my last week on the project. A future step would be to make this feature more interactive and efficient.
     
+    
+
+NOTE:
 More detailed information can be found within the comments of the HTML, CSS and Javascript files included in the WEBPAGE directory.
     
    
