@@ -10,9 +10,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Scripts <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run the script <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. [Running raw text files as input for the pipeline](#desc1.2) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [Using brat to Visually Display the Output](#desc1.2) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. [BRAT](#desc1.2) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f. [Edit the Pipeline](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the scripts included in this repository<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to write your own script file to run raw texts <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. [BRAT](#desc1.2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standoff Annotation Format <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting up the brat standalone server<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using the brat standalone server to visualize .ann files<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using the brat standalone server to annotate manually<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuring brat<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. [Edit the Pipeline](#desc1.2) <br>
 
 
 2)[ NER ](#desc1) <br>
