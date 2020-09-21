@@ -1,5 +1,8 @@
+1. [ Description. ](#desc)
 
-# Description
+
+<a name="desc"></a>
+# 1. Description
 
 This pipeline performs general coreference resolution for biomedical text. It incorporates a variety of coreference types (anaphora, appositive, etc.) and their textual expressions (definite noun phrases, possessive pronouns, etc.).
 
