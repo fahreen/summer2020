@@ -300,7 +300,81 @@ neato -Tsvg input.gv -o output.svg
  neato -Tsvg input.gv -o output.svg
 ```
 2) Insert the svg wiithin an HTML page, by copy pasting everything within the <svg> tag.
-3) To create a responsive node (on click), create a JS function, similar to one outlined in the javascript file, and target the node using the autogenerate <id> tag   
+3) Inside the HTML file, each node will have a structure similar to the following:
+    
+     ```
+     <!-- 15A -->
+     <g id="node1" class="node">
+     <title>15A</title>
+     <ellipse fill="lightskyblue" stroke="lightskyblue" cx="231.14" cy="-642.29" rx="27" ry="18"/>
+     <text text-anchor="middle" x="231.14" y="-638.59" font-family="Times,serif" font-size="14.00">15A</text>
+     </g>```
+
+The id can be used in JS functions to target node colours.  For example the following function changes the node outline when the corresponding conclusion is clicked on the conclusion menu bar on the webpage:
+
+ ```
+ //15A
+function fifteenA(){
+  var x = document.getElementById("15A");
+  var color = x.style.fill;
+
+  if (x.style.stroke === "yellow"){
+    x.style.stroke = color ;
+    var k =1;
+    var m = 1;
+    while (k < 61){
+        document.getElementById("node"+ k).style.opacity = "1";
+        k++;
+    }
+    while (m < 85){
+        document.getElementById("edge"+ m).style.opacity = "1";
+        m++;
+  }
+  }
+
+    else{
+    x.style.stroke = "yellow";
+      var i = 1;
+      var j =1;
+      while (i < 61){
+        if (i !== 1 && i!== 25){
+          document.getElementById("node"+ i).style.opacity = "0.5";}
+        i++;
+      }
+
+      while (j < 85){
+          if (j !== 42){
+            document.getElementById("edge"+ j).style.opacity = "0.25";}
+        j++;
+      }
+  }
+
+  var a1 = document.getElementById("fig3_15Aline");
+  var a2 = document.getElementById("fig3_15Aarr");
+
+
+  if (a1.style.stroke === "red"){
+    a1.style.stroke = "black";
+    a2.style.stroke = "black";
+    a2.style.fill = "black";
+  }
+  else{
+    a1.style.stroke = "red";
+    a2.style.stroke = "red";
+    a2.style.fill = "red";
+}
+}
+```
+
+4) To link a highlighted PDF, name a PDF file based on each conclusion. 
+    
+
+
+
+```
+onclick="window.open('PDF/15A.pdf', '_blank', 'fullscreen=yes');
+```
+    
 More detailed information can be found within the comments of the HTML, CSS and Javascript files included in the WEBPAGE directory.
     
    
