@@ -28,9 +28,9 @@
 
 
 <a name="desc1"></a>
-# Coreferencing/NER Related Work
+# 1) Coreferencing
 <a name="desc1.1"></a>
-## 1. Description
+## a. Description
 This pipeline performs general coreference resolution for biomedical text. It incorporates a variety of coreference types (anaphora, appositive, etc.) and their textual expressions (definite noun phrases, possessive pronouns, etc.).
 
 The paper looks at three domains:
@@ -42,7 +42,7 @@ Read [Paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0
 
 Download [Code](https://github.com/kilicogluh/Bio-SCoRes)
 
-## Run The Pipeline
+## b. Run The Pipeline
 ### Requirements
 * Java (jar files have been generated with 1.8, though it is possible to recompile with 1.7)
 * Ant (needed for recompilation, version 1.8 was used for compilation)
@@ -93,7 +93,7 @@ For example, to run the bionlp script
 ./bin/bionlp
 ```
 
-## Running raw text files as input for the pipeline
+## c. Running raw text files as input for the pipeline
 ### Use the scripts included in this repository
 1) Download the **stanford-corenlp-3.3.1-models.jar** file included in this repository, and place it in the **lib** folder found in the BioScores package
 2) Download the scripts included in this repository named **runRawText** folder
@@ -135,8 +135,8 @@ done
 java -Xmx1G -Djava.util.logging.config.file=logging.properties tasks.coref....[XML_WRITER] [INPUT_FOLDER] [OUTPUT_FOLDER]
 ```
 
-# Using brat to Visually Display the Output
-## Standoff Annotation Format
+## d. BRAT
+### Standoff Annotation Format
 The Bio-Scores pipeline produces .ann files, which are in Standoff Annotation Format. Here is an example of a typical .ann file:
 ```
 R3	Coref Anaphora:T17 Antecedent:T35
@@ -157,7 +157,7 @@ You can read about it how to interpret these files [here](https://brat.nlplab.or
 
 These files can be interpreted by BRAT, which is a visulization tool for annotations.  BRAT takes the .ann files outputted in the pipeline and produces a visual representation. 
 
-## Setting up the brat standalone server
+### Setting up the brat standalone server
 1) Download brat [here](https://brat.nlplab.org/index.html).
 2) Extract the zip file and cd into the created brat directory
 ```
@@ -168,7 +168,7 @@ cd brat-v1.3_Crunchy_Frog
 ./install.sh
 ```
 
-## Using the brat standalone server to visualize .ann files
+### Using the brat standalone server to visualize .ann files
 1) brat requires the .txt file and .ann file for each annotation.  As well as 4 **.config** files which control the type, colors, and normalization.  Download the folders rhetorical_moves and coreference and place them under **~/brat-v1.3_Crunchy_Frog/data**
 2) From **~/brat-v1.3_Crunchy_Frog**, start the standalone server:
 ```
@@ -180,7 +180,7 @@ python standalone.py
 
 5) CTRL-c in terminal to stop the server
 
-## Using the brat standalone server to annotate manually
+### Using the brat standalone server to annotate manually
 brat can also be used to annotate text manually
 1) To edit in the browser, make sure to login with the username and password from when the server was created.  Otherwise editing abilities
 Upload text raw text into the data folder
@@ -188,7 +188,7 @@ Upload text raw text into the data folder
 
 note: As you annotate, brat will automatically create .ann files automatically(like the ones generated in the pipeline).  These files can be really useful for processing annotations through simple text programs, for purposes of identifying patterns and relationships.
 
-## Configuring brat
+### Configuring brat
 Configuration files allow the user to specify the annotations, relationships attributes and event types for your annotations and should be included with the data, within the same folder. If no configuration is provided, the brat server will look for the configuration in the parent folder.  If still no config file is found, the default will be used. 
 
 There are 4 config files:
@@ -199,15 +199,15 @@ There are 4 config files:
 
 For more information on how to create, edit or interpret the existing configuration files, read the [following](https://brat.nlplab.org/configuration.html).
 
-# Edit the Pipeline
+## e. Edit the Pipeline
 For a breakdown of the pipeline, and how to build configurations, there is a [google doc](https://docs.google.com/document/d/1M9EJd6a5ILfhRh84E8joikZ4SX4YjdcgtJ86fjLq1Xc/edit?usp=sharing) availaible, where I have summarized the key parts of the pipeline and how to edit the code.
 
 For a better understanding of the structure of the code in the pipeline, take a look at the [UML diagram](https://app.diagrams.net/#G1RE_8oV_YLIL5-iApDI-j_2tjE0FMZ7h1) I've created.
 
 
-# NER(Named Entity Recognition)
+# 2) NER(Named Entity Recognition)
 
-## PubTator Central
+## a. PubTator Central
 PubTator Central (PTC) is a Web-based system, which provides automatic annotations of biomedical concepts such as genes and mutations. It is powered by TaggerOne, tmVar, GNormPlus, SR4GN and SimConcept.
 
 Annotations are only availaible for **PubMed abstracts** and **PMC full-text articles**.  The article we are looking at is not availaible in the PMC database, only Pubmed.  Thus, only the abstract can be annotated through pubmed. 
@@ -219,7 +219,7 @@ https://www.ncbi.nlm.nih.gov/research/pubtator/index.html?view=docsum&query=[PMI
 or enter ID from this Pubtar [search engine](https://www.ncbi.nlm.nih.gov/research/pubtator/index.html)
 
 
-## Pubtator API for processing raw text
+## b. Pubtator API for processing raw text
 To process any raw text, input must be converted to [BioC](http://bioc.sourceforge.net/), pubtator or JSON formats. There is a section below, which provides the APIs to retrieve the  BioC format for an article. Unfortunately, BioC formats are also only availaible for articles in the PMC and Pubmed databases.
 
 After retrieving the BioC format of the article you want to process, use the following steps from terminal:
@@ -245,7 +245,7 @@ When submitting this request, the system will return a warning message : [Warnin
 
 For more information about formats, visit [here](https://www.ncbi.nlm.nih.gov/research/pubtator/api.html)
 
-### BioC
+## c. BioC
 
 [API](https://www.ncbi.nlm.nih.gov/research/bionlp/APIs/BioC-PMC/) for retrieving  PMC abstracts in BioC format:
  ```
@@ -257,7 +257,7 @@ For more information about formats, visit [here](https://www.ncbi.nlm.nih.gov/re
 ```
 
 
-## MetaMap Lite
+## d. MetaMap Lite
 Follow this [link](https://metamap.nlm.nih.gov/MetaMapLite.shtml) to access Metamap and select "MetaMap Lite" under **Run Locally**. Metamap requires a username and password for access, can be retrieved from Dr. Mercer.
 
 Input: raw text file
